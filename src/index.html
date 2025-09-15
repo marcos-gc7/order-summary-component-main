@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Order summary card</title>
   <link href="./output.css" rel="stylesheet">
   
@@ -14,31 +17,29 @@
     </style>
   -->
 </head>
-<body>
+<body class="flex justify-center items-center w-screen h-screen bg-[#e0e8ffff]">
 
-  <main>
+  <main class="max-w-[375px] rounded-3xl overflow-hidden bg-white shadow-[0_12px_24px_#382ae126]">
     <div>
       <img src="../images/illustration-hero.svg">
     </div>
 
-    <h1>Order Summary</h1>
-
-    <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
-
-    <div>
+    <div class="p-5">
+      <h1 class="text-[#1b2a3b] pt-4 pb-4 font-extrabold text-center text-xl">Order Summary</h1>
+      <p class=" text-[#8f9bb3] text-center text-[15px] pl-10 pr-10 pb-5 leading-[26px] ">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
       
-      <img src="../images/icon-music.svg">
-
-      <div>
-        <h2>Annual Plan</h2>
-        <h3>$59.99/year</h3>
+      <div class="flex flex-row flex-nowrap justify-between items-center p-4 mb-5 rounded-2xl bg-[#f8faff]">
+        <img src="../images/icon-music.svg">
+        <div>
+          <h2 class="text-[#1b2a3b] font-bold">Annual Plan</h2>
+          <h3 class="text-[#8f9bb3] font-medium">$59.99/year</h3>
+        </div>
+        <a href="#" class="underline font-semibold text-[#382AE1] hover:no-underline hover:text-[#9288ff]">Change</a>
       </div>
 
-      <a href="#">Change</a>
+      <button class="border-[1px] w-full p-4 mb-5 rounded-2xl cursor-pointer font-semibold text-white bg-[#382AE1] shadow-[0_12px_20px_#382ae133] hover:bg-[#9288ff]">Proceed to Payment</button>
+      <h2 class="text-center text-[#8f9bb3] font-bold mb-3 cursor-pointer hover:text-[#1b2a3b]">Cancel Order</h2>
     </div>
-
-    <button>Proceed to Payment</button>
-    <h2>Cancel Order</h2>
   </main>
 
   <!-- 
