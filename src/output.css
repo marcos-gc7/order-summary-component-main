@@ -1,5 +1,4 @@
 /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -8,11 +7,17 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -21,6 +26,7 @@
     --radius-3xl: 1.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-redhat: "Red Hat Display", sans-serif;
   }
 }
 @layer base {
@@ -202,14 +208,23 @@
   .w-screen {
     width: 100vw;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .flex-row {
     flex-direction: row;
   }
   .flex-nowrap {
     flex-wrap: nowrap;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -229,6 +244,10 @@
   .rounded-3xl {
     border-radius: var(--radius-3xl);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-\[1px\] {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -242,8 +261,8 @@
   .bg-\[\#f8faff\] {
     background-color: #f8faff;
   }
-  .bg-red-500 {
-    background-color: var(--color-red-500);
+  .bg-white {
+    background-color: var(--color-white);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
@@ -269,6 +288,9 @@
   .text-center {
     text-align: center;
   }
+  .font-redhat {
+    font-family: var(--font-redhat);
+  }
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
@@ -292,12 +314,19 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
   .text-\[\#1b2a3b\] {
     color: #1b2a3b;
+  }
+  .text-\[\#5C6C8C\] {
+    color: #5C6C8C;
   }
   .text-\[\#8f9bb3\] {
     color: #8f9bb3;
@@ -351,7 +380,70 @@
       }
     }
   }
+  .xl\:mb-6 {
+    @media (width >= 80rem) {
+      margin-bottom: calc(var(--spacing) * 6);
+    }
+  }
+  .xl\:w-\[450px\] {
+    @media (width >= 80rem) {
+      width: 450px;
+    }
+  }
+  .xl\:bg-\[url\(\'\.\.\/images\/pattern-background-desktop\.svg\'\)\] {
+    @media (width >= 80rem) {
+      background-image: url('../images/pattern-background-desktop.svg');
+    }
+  }
+  .xl\:bg-\[length\:100\%\] {
+    @media (width >= 80rem) {
+      background-size: 100%;
+    }
+  }
+  .xl\:bg-no-repeat {
+    @media (width >= 80rem) {
+      background-repeat: no-repeat;
+    }
+  }
+  .xl\:p-5 {
+    @media (width >= 80rem) {
+      padding: calc(var(--spacing) * 5);
+    }
+  }
+  .xl\:p-10 {
+    @media (width >= 80rem) {
+      padding: calc(var(--spacing) * 10);
+    }
+  }
+  .xl\:pt-1 {
+    @media (width >= 80rem) {
+      padding-top: calc(var(--spacing) * 1);
+    }
+  }
+  .xl\:pr-2 {
+    @media (width >= 80rem) {
+      padding-right: calc(var(--spacing) * 2);
+    }
+  }
+  .xl\:pl-2 {
+    @media (width >= 80rem) {
+      padding-left: calc(var(--spacing) * 2);
+    }
+  }
+  .xl\:text-2xl {
+    @media (width >= 80rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .xl\:text-base {
+    @media (width >= 80rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+  }
 }
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
